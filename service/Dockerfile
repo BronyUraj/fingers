@@ -12,4 +12,4 @@ RUN chmod 777 /kumir2-run
 
 WORKDIR /
 
-CMD ["socat", "TCP-LISTEN:1337,reuseaddr,fork,keepalive", "EXEC:./run.sh"]
+CMD ["socat", "TCP-LISTEN:1337,reuseaddr,fork,keepalive", "EXEC:timeout 10 ./run.sh"]
